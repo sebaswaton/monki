@@ -730,7 +730,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Explotación directa de servicios",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -746,7 +746,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Explotación directa de servicios"
             ],
             "id": "3b81f7a0-2761-4a76-95af-4510ba1fca07",
             "source": {
@@ -756,7 +756,17 @@
             "target": {
               "cell": "bab3a7b8-dc17-41a3-9177-efd32d0a3990",
               "port": "0b98b559-1301-4f6b-88b4-2fbd63e60b51"
-            }
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 150
+              },
+              {
+                "x": 360,
+                "y": 150
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -778,7 +788,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "HTTP/HTTPS (requests)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -794,7 +804,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "HTTP/HTTPS (requests)"
             ],
             "id": "6493656d-e401-4336-9d5f-1debfdd46cbd",
             "source": {
@@ -808,6 +818,10 @@
             "vertices": [
               {
                 "x": 220,
+                "y": 160
+              },
+              {
+                "x": 670,
                 "y": 160
               }
             ]
