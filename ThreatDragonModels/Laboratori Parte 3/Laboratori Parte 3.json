@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "79da1e29-63ba-4024-8b87-466ba9da5bf0",
             "zIndex": -1,
+            "id": "79da1e29-63ba-4024-8b87-466ba9da5bf0",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -45,7 +45,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "be437e08-982d-4fa0-ac36-7ad3f4d9b31e",
-                "1812dcec-5cc6-4e0a-aa5f-19cb6c5116ea"
+                "1812dcec-5cc6-4e0a-aa5f-19cb6c5116ea",
+                "3b81f7a0-2761-4a76-95af-4510ba1fca07"
               ],
               "containedElements": [
                 "bab3a7b8-dc17-41a3-9177-efd32d0a3990",
@@ -65,6 +66,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Aplicación Web (DVWA/Apache)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -73,6 +77,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -156,10 +161,9 @@
               ]
             },
             "id": "bab3a7b8-dc17-41a3-9177-efd32d0a3990",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Aplicación Web (DVWA/Apache)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -182,6 +186,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Servicios de red (FTP/SSH/SMB)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -190,6 +197,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -273,10 +281,9 @@
               ]
             },
             "id": "89c31b23-ebd5-4d1b-bd40-866c29428679",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Servicios de red (FTP/SSH/SMB)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -299,6 +306,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Kali Linux (Pentester)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -307,6 +317,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -390,10 +401,9 @@
               ]
             },
             "id": "04fa0d84-bda8-4e61-b60b-5650532d1ea4",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Kali Linux (Pentester)",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -413,6 +423,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Base de datos (MySQL/PostgreSQL)"
+              },
               "topLine": {
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
@@ -424,6 +437,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -507,10 +521,9 @@
               ]
             },
             "id": "589e09ea-72ff-402a-83d9-b27571b93d5b",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
-              "name": "Store",
+              "name": "Base de datos (MySQL/PostgreSQL)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -534,6 +547,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Sistema de archivos"
+              },
               "topLine": {
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
@@ -545,6 +561,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -628,10 +645,9 @@
               ]
             },
             "id": "2376409d-d3f6-4710-917c-afb441290687",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
-              "name": "Store",
+              "name": "Sistema de archivos",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -739,6 +755,100 @@
             "target": {
               "cell": "2376409d-d3f6-4710-917c-afb441290687",
               "port": "ecc38b24-b33c-4b88-9eae-7b2e3e6fe9b3"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "79da1e29-63ba-4024-8b87-466ba9da5bf0"
+              ]
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "3b81f7a0-2761-4a76-95af-4510ba1fca07",
+            "source": {
+              "x": 173,
+              "y": 120
+            },
+            "target": {
+              "cell": "bab3a7b8-dc17-41a3-9177-efd32d0a3990",
+              "port": "0b98b559-1301-4f6b-88b4-2fbd63e60b51"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "6493656d-e401-4336-9d5f-1debfdd46cbd",
+            "source": {
+              "x": 173,
+              "y": 110
+            },
+            "target": {
+              "x": 273,
+              "y": 210
             }
           }
         ]
